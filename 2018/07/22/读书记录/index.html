@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递">
+<meta name="description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递    并发第66条:同步访问共享的数据其实解决线程安全问题最好的办法就是不共享可变的数据">
 <meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="effertive  读书记录">
 <meta property="og:url" content="http://yoursite.com/2018/07/22/读书记录/index.html">
 <meta property="og:site_name" content="lkj41110的博客">
-<meta property="og:description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递">
+<meta property="og:description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递    并发第66条:同步访问共享的数据其实解决线程安全问题最好的办法就是不共享可变的数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-22T13:44:31.080Z">
+<meta property="og:updated_time" content="2018-07-29T14:18:21.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="effertive  读书记录">
-<meta name="twitter:description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递">
+<meta name="twitter:description" content="优先使用基本类型相比于包装类型 谨慎使用本地的方法:jvm 的实现越来越块，不一定比本地方法慢，本地方法安全性很低  Equal 的原则  用== 判断是否相等 判断类型 把对象转换成对应的类型 对于 类 中的 关键 域 是否一一匹配 对 域的 判断最好 把最不可能的域先放前面 是否对称 是否一致 是否传递    并发第66条:同步访问共享的数据其实解决线程安全问题最好的办法就是不共享可变的数据">
 
 
 
@@ -368,7 +368,9 @@
 </ul>
 </li>
 </ul>
-
+<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h3 id="第66条-同步访问共享的数据"><a href="#第66条-同步访问共享的数据" class="headerlink" title="第66条:同步访问共享的数据"></a>第66条:同步访问共享的数据</h3><p>其实解决线程安全问题最好的办法就是不共享可变的数据。要么共享不可变的数据，要么不共享数据。简而言之：<code>尽量将可变数据限制在单线程中维护。或者将变量设置成不可修改</code><br><code>当多个线程共享可变数据的时候，每个读或者写的线程都必须同步</code>，可以使用<code>synchronized</code>关键字来保证方法或者代码块的同步，或者也可以使用<code>volatile</code>来确保数据的可见性，但是不能保证原子性，或者使用一线线程安全的类(比如concurrent包下面的类)。</p>
+<h3 id="第67条：避免过度使用同步"><a href="#第67条：避免过度使用同步" class="headerlink" title="第67条：避免过度使用同步"></a>第67条：避免过度使用同步</h3><h3 id="第68条：使用executer和task"><a href="#第68条：使用executer和task" class="headerlink" title="第68条：使用executer和task"></a>第68条：使用executer和task</h3><p>jdk 1.5之后提供了concurrent包，里面包含了线程池框架。通过线程池我们可以更好地控制线程资源，可以方便地创建、管理、销毁、结束线程。concurrent提供了可以直接创建线程池的工厂类Executors，也可以直接使用ThreadPoolExecutor类来最大程度化的控制线程池操作。（计划去阅读<code>&lt;&lt;java并发编程实践&gt;&gt;</code>）</p>
+<h3 id="第79条：并发工具优先于wait和notify"><a href="#第79条：并发工具优先于wait和notify" class="headerlink" title="第79条：并发工具优先于wait和notify"></a>第79条：并发工具优先于wait和notify</h3>
       
     </div>
     
@@ -487,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -548,6 +559,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#并发"><span class="nav-number">1.</span> <span class="nav-text">并发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第66条-同步访问共享的数据"><span class="nav-number">1.1.</span> <span class="nav-text">第66条:同步访问共享的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第67条：避免过度使用同步"><span class="nav-number">1.2.</span> <span class="nav-text">第67条：避免过度使用同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第68条：使用executer和task"><span class="nav-number">1.3.</span> <span class="nav-text">第68条：使用executer和task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第79条：并发工具优先于wait和notify"><span class="nav-number">1.4.</span> <span class="nav-text">第79条：并发工具优先于wait和notify</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -743,7 +770,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("2H3zdMpL69wHcMm6k7P9V5DY-gzGzoHsz", "GeBG4NqEndqL00obFxvWrIJy");</script>
+  <script>AV.initialize("zQmXSnzmsUDJFzMxJt5dYrUt-gzGzoHsz", "njQIGvSi0yPJn6cg3wzpOIii");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
