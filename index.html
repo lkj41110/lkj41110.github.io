@@ -249,6 +249,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/03/蚂蚁金服面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lkj41110">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lkj41110的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/03/蚂蚁金服面试/" itemprop="url">蚂蚁金服面试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T09:59:36+08:00">
+                2018-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/03/蚂蚁金服面试/" class="leancloud_visitors" data-flag-title="蚂蚁金服面试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>上个月参加了蚂蚁金服的一面、二面感觉自身还存在很多问题，今天稍微总结下自身存在的不足，以便以后再接再厉。</p>
+<hr>
+<p>某天早上在Boss上投了一份简历，中午就来了面试的电话。说是蚂蚁金服的面试官。<br>然后就开始了蚂蚁金服公司一面：</p>
+<ul>
+<li>项目中那些部分是觉得有挑战性的。会对你的回答进行提问。</li>
+<li>因为项目的原因我回答了有关最短路径搜索，就问了深搜、广搜、A*方面的算法<ul>
+<li>A*相对广搜有那些优势和你的实现方式</li>
+<li>怎么理解A*中局部最优和全局最优的关系</li>
+</ul>
+</li>
+<li>HTTP的流转流程和每一层做了什么操作，做了什么优化(面试的时候没有了解深入，后面疯狂复习了)</li>
+<li>HTTP的缺点和优化方式</li>
+<li>JVM的运行时的区域划分，每个区域有什么作用<ul>
+<li>出现内存溢出的时候怎么进行排查？什么时候会出现方法区溢出？怎么进行排查？</li>
+<li>出现线程堵塞的时候怎么进行排查？</li>
+</ul>
+</li>
+<li>项目中使用过那些设计模式?每个设计模式有什么优点在哪里用的比较多，结合项目或者源码分析一下。</li>
+<li>谈谈你最熟悉的开源代码</li>
+<li>Dubbo、spring中令人印象深刻代码设计。dubbo大概可以分为几层？</li>
+<li>实现自定义注解需要那几个步骤，spring在自定义注解上做了哪些优化</li>
+<li>你们公司自己封装的自定义注解和springMVC有什么区别，缺点是什么</li>
+<li>如果让你设计一个并发任务管理系统，你会分为那几个部分，每个部分有什么作用。每个部分怎么进行协作<ul>
+<li>选出一个模块讲讲你该怎么具体实现。</li>
+</ul>
+</li>
+<li>JDK的集合类了解多少？hashmap怎么解决hash冲突？</li>
+<li>ConcurrentHashMap怎么实现并发</li>
+<li>对锁了解多少，分别讲讲是怎么实现的。<ul>
+<li>公平锁和非公平锁的区别。独占锁和共享锁的区别和实现。</li>
+<li>AQS的了解</li>
+</ul>
+</li>
+<li>谈谈高并发的了解，可以分为哪几个方面的优化？<ul>
+<li>限流使用什么算法限流？</li>
+<li>数据库层面使用什么方法？</li>
+<li>如果数据库分库分表怎么变别某条sql放在哪里</li>
+<li>扩容的时候处理新老数据</li>
+</ul>
+</li>
+<li>有什么问题想问<ul>
+<li>问：胜任这个工作需要有哪些技术，你们项目用了那些技术栈</li>
+<li>问：面试中自己身上有哪些不足</li>
+<li>问：能否请教下二面需要强化一下哪些知识</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>过了大半个月终于收到了二面的通知，是现场面试。<br>蚂蚁金服二面：</p>
+<ul>
+<li>请在和黑板上画一下你现在负责的项目的架构<ul>
+<li>项目中有没有特别难或者你觉得很有挑战性的问题</li>
+</ul>
+</li>
+<li>请写一下A*的原理和伪代码</li>
+<li>对java内存模型了解多少<ul>
+<li>堆是怎么划分的</li>
+<li>新建一个大对象放到堆里的步骤是什么</li>
+<li>遇到内存溢出问题怎么排查和解决</li>
+<li>遇到栈溢出怎么解决</li>
+</ul>
+</li>
+<li>你最熟悉的jdk源码是什么<ul>
+<li>把200W个对象放到HashMap中应该注意哪些细节</li>
+<li>把一个对象从上面的集合中取出来要注意哪些细节</li>
+</ul>
+</li>
+<li>请手写一个多线程求10W数据总和的伪代码</li>
+</ul>
+<hr>
+<p>一面是电话面试，差不多进行了100分钟(内心是崩溃的),从面试内容(有部分内容忘记或者忽略了)中也可以看出一面是点出发，来考察面试者的知识广度和深度。问题也都是一些网上比较多的问题，其中比较考验能力的是让你设计一个并发监控系统比较灵活，需要从看过的系统或者书籍来类比出需要哪些模块和怎么实现这些模块。还好我看过dubbo的注册模块稍微讲了一下。<br>二面相对一面时间短，所以面试官都是直接提问你最熟悉的项目，算法，源码等方面。并会更具你的回答来进行提问或者出题，相对于一面最大的不同是较为灵活。如我回答最熟悉的jdk源码是hashMap时，面试官直接扔给我一个题目让我回答注意点，这样既可以考你对源码的了解程度，同时也看你对其中的注意点的概括和理解程度。 </p>
+<p>目前还没有收到二面的结果，感觉自己已经凉凉.<br>从两次面试中我也发现自己存在的问题：</p>
+<ol>
+<li>没有出彩的项目经验(需要多思考目前项目的存在的问题和应该如何解决)</li>
+<li>对使用过的算法没有深刻的了解，比如算法的性能，和其他算法的优缺点。以及如何在短时间内快速精确的去向别人描述一个算法(这个在两次面试中发挥的不是很好，不仅仅是算法，总体都可以概括为表达能力)</li>
+<li>自己的知识广度已经差不多，但是很多时候没有去扣细节。多问问自己为什么要这样实现，如果自己实现要怎么实现，这样实现有什么好处等等来加强自己的深度</li>
+<li>遇到问题还不够灵活</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/22/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -586,7 +794,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -608,7 +816,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
