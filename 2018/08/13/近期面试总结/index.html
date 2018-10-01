@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。  项目  项目其实是一个挺重要的的环节，特别是三面或者四面,领导面试的时候往往都会从项目入手，查看你对项目宏观的了解情况。其中也会涉及到遇到的问题等等，从项目中往往就可以看出很多东西。   并发模块  线程池 锁机">
+<meta name="description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。 项目个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、平时遇到的技术难点入手来考察你。很多同学可能会碰到和我一样的问题，就是工作上大多数时间负责的是业务模">
 <meta name="keywords" content="经历">
 <meta property="og:type" content="article">
 <meta property="og:title" content="近期面试总结">
 <meta property="og:url" content="http://yoursite.com/2018/08/13/近期面试总结/index.html">
 <meta property="og:site_name" content="lkj41110的博客">
-<meta property="og:description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。  项目  项目其实是一个挺重要的的环节，特别是三面或者四面,领导面试的时候往往都会从项目入手，查看你对项目宏观的了解情况。其中也会涉及到遇到的问题等等，从项目中往往就可以看出很多东西。   并发模块  线程池 锁机">
+<meta property="og:description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。 项目个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、平时遇到的技术难点入手来考察你。很多同学可能会碰到和我一样的问题，就是工作上大多数时间负责的是业务模">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-13T15:52:56.085Z">
+<meta property="og:updated_time" content="2018-09-01T07:40:44.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="近期面试总结">
-<meta name="twitter:description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。  项目  项目其实是一个挺重要的的环节，特别是三面或者四面,领导面试的时候往往都会从项目入手，查看你对项目宏观的了解情况。其中也会涉及到遇到的问题等等，从项目中往往就可以看出很多东西。   并发模块  线程池 锁机">
+<meta name="twitter:description" content="最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。 项目个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、平时遇到的技术难点入手来考察你。很多同学可能会碰到和我一样的问题，就是工作上大多数时间负责的是业务模">
 
 
 
@@ -332,63 +332,34 @@
 
       
         <p>最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。</p>
+<h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、平时遇到的技术难点入手来考察你。很多同学可能会碰到和我一样的问题，就是工作上大多数时间负责的是业务模块，很多时候做的是增删改查怎么办。其实不管是业务系统还是中间件架构，我们要做的是多思考，在平时写代码的时候需要多思考那些部分可以优化和改进，并动手进行实践。平时也多看看别的代码，学习好的代码结构对面试或者是我们工作都有着好处。<br>项目模块也包括一些开源技术的了解和参与，在业余实践可以多看看开源框架，例如spring、dubbo、netty等等，可以学到很多知识。 </p>
+<h3 id="并发模块"><a href="#并发模块" class="headerlink" title="并发模块"></a>并发模块</h3><pre><code>- 线程池
+- 锁机制
+- 线程安全
+</code></pre><h3 id="java-集合"><a href="#java-集合" class="headerlink" title="java 集合"></a>java 集合</h3><pre><code>- 基本上只会问hashMap的原理和应用（和currentHashMap的区别必考题。。。）
+- 还会问一些hashMap的扩展，以及hashmap的注意点等等
+- guava的不可变集合的优点以及实现
+</code></pre><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><pre><code>- 基本上只会问一下基本的内容，除非面试官对JVM这块非常熟悉。其他的只要看两遍《深入理解Java虚拟机》就可以应付面试（`当然个人认为学习所有的知识都不是仅仅为了应付面试，真正的大牛是学以致用`）
+- JVM比较难的点是JVM调优（个人没有调优经验）
+- 内存溢出以及CPU100%的时候的分析以及排查方法
+</code></pre><h3 id="redis-模块"><a href="#redis-模块" class="headerlink" title="redis 模块"></a>redis 模块</h3><p>redis 最常见的问题就是redis的基本结构，当然个人认为可以把这几个基本结构的内部实现原理了解是更好的。以及会涉及在那些场合使用了redis，其实也就是redis的应用场景和优点出发并结合自己的业务进行回答即可。<br>redis还会从如何实现分布式锁，redis是怎么实现持久化，redis遇到的问题等等出发。可以参考《redis开发与运维》这本书来学习redis相关的知识。</p>
 <ul>
-<li><p>项目</p>
-<ul>
-<li>项目其实是一个挺重要的的环节，特别是三面或者四面,领导面试的时候往往都会从项目入手，查看你对项目宏观的了解情况。其中也会涉及到遇到的问题等等，从项目中往往就可以看出很多东西。</li>
-</ul>
-</li>
-<li><p>并发模块</p>
-<ul>
-<li>线程池</li>
-<li>锁机制</li>
-<li>线程安全</li>
-</ul>
-</li>
-<li>java 集合<ul>
-<li>基本上只会问hashMap的原理和应用（和currentHashMap的区别必考题。。。）</li>
-<li>还会问一些hashMap的扩展，以及hashmap的注意点等等</li>
-</ul>
-</li>
-<li><p>JVM</p>
-<ul>
-<li>基本上只会问一下基本的内容，除非面试官对JVM这块非常熟悉。其他的只要看两遍《深入理解Java虚拟机》就可以应付面试（<code>当然个人认为学习所有的知识都不是仅仅为了应付面试，真正的大牛是学以致用</code>）</li>
-<li>JVM比较难的点是JVM调优（个人没有调优经验）</li>
-<li>内存溢出以及CPU100%的时候的分析以及排查方法</li>
-</ul>
-</li>
-<li><p>redis 模块（正在学习，先学会如何灵活应用）</p>
-<ul>
-<li>缓存问题</li>
-<li>分布式锁问题</li>
-<li>基本类型，高级类型，</li>
-</ul>
-</li>
 <li>rpc（本人学习的是dubbo）<ul>
 <li>暴露过程，引用过程，调用过程</li>
+<li>rpc的组成模块和常见问题</li>
 <li>SPI</li>
-<li></li>
-</ul>
-</li>
-<li>Http<ul>
+<li><h3 id="Http"><a href="#Http" class="headerlink" title="Http"></a>Http</h3></li>
 <li>http机构</li>
 <li>http响应头和请求头</li>
-<li>http的缺点和优化点（安全，连接状态，效率等等出发）</li>
-</ul>
-</li>
-<li><p>IO NIO Netty</p>
-<ul>
+<li>http的缺点和优化点（安全，连接状态，效率等等出发）<h3 id="IO-NIO-Netty"><a href="#IO-NIO-Netty" class="headerlink" title="IO NIO Netty"></a>IO NIO Netty</h3></li>
 <li>这三个是可以一起比较和学习的，循序渐进，三者的区别，以及Netty相比于NIO的优点等等</li>
 </ul>
 </li>
-<li><p>其他模块</p>
-<ul>
-<li>序列化</li>
-<li></li>
 </ul>
-</li>
-</ul>
-<hr>
+<h3 id="其他模块"><a href="#其他模块" class="headerlink" title="其他模块"></a>其他模块</h3><pre><code>- 序列化
+- 设计模式
+- 框架设计
+</code></pre><hr>
 <p>目前个人的知识面广度在已经足以应付面试，但是在深度方面需要加强。很多知识知识来源于别人的博客和书本，看到了只是在脑子里过了一遍并没有仔细思考过为什么这个做，这样做的好处是什么。源码也是同理，为什么要这样设计，这样的设计的好处是什么等等。就像一个面试官所说的一样：<code>“很多东西虽然了解，但还是需要知道为什么所以然。”</code> </p>
 <p>所以在后面的学习生涯中更要注重深度的加强，真正的把别人的知识化为自己的知识，并运用在自己的业务代码里。 </p>
 
@@ -514,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -579,6 +559,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">1.</span> <span class="nav-text">项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发模块"><span class="nav-number">2.</span> <span class="nav-text">并发模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java-集合"><span class="nav-number">3.</span> <span class="nav-text">java 集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM"><span class="nav-number">4.</span> <span class="nav-text">JVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis-模块"><span class="nav-number">5.</span> <span class="nav-text">redis 模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Http"><span class="nav-number">6.</span> <span class="nav-text">Http</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO-NIO-Netty"><span class="nav-number">7.</span> <span class="nav-text">IO NIO Netty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他模块"><span class="nav-number">8.</span> <span class="nav-text">其他模块</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
