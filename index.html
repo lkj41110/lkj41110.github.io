@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,7 +93,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -291,6 +291,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">Elasticsearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -331,7 +353,10 @@
       
         
           
-          简介es在对文档进行倒排索引的需要用分析器(Analyzer)对文档进行分析、建立索引。从文档中提取词元（Token）的算法称为分词器（Tokenizer），在分词前预处理的算法称为字符过滤器（Character Filter），进一步处理词元的算法称为词元过滤器（Token Filter），最后得
+          简介es在对文档进行倒排索引的需要用分析器(Analyzer)对文档进行分析、建立索引。从文档中提取词元（Token）的算法称为分词器（Tokenizer），在分词前预处理的算法称为字符过滤器（Character Filter），进一步处理词元的算法称为词元过滤器（Token Filter），最后得到词（Term）。这整个分析算法称为分析器（Analyzer）。
+其工作流程：
+
+先会使用字符过滤器
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -405,7 +430,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/20/es学习————介绍/" itemprop="url">es学习————介绍</a></h1>
+                <a class="post-title-link" href="/2018/10/20/es学习————介绍/" itemprop="url">ES学习————介绍</a></h1>
         
 
         <div class="post-meta">
@@ -457,7 +482,7 @@
 
           
           
-             <span id="/2018/10/20/es学习————介绍/" class="leancloud_visitors" data-flag-title="es学习————介绍">
+             <span id="/2018/10/20/es学习————介绍/" class="leancloud_visitors" data-flag-title="ES学习————介绍">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -489,13 +514,11 @@
 
       
         
-          
-          前言在了解Elasticsearch之前，我们应该先了解下：
-
-什么是搜索引擎
-目前有哪些主流的搜索引擎
-搜索引擎搜索的质量应该如何评价简介什么是ESes全称为Elasticsearch，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编
-          ...
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在了解Elasticsearch之前，我们应该先了解下：</p>
+<ol>
+<li>什么是搜索引擎</li>
+<li>目前有哪些主流的搜索引擎</li>
+<li>搜索引擎搜索的质量应该如何评价
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/10/20/es学习————介绍/#more" rel="contents">
@@ -649,7 +672,12 @@ redis作用
 异步队列
 布隆过滤
 简单限流（窗口限流），漏斗限流（Cell模块）
-地理位
+地理位置：GEO
+key，Scan
+
+经典例子
+排序：获取最新的列表数据。（zset,list）
+排行榜：
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -787,7 +815,7 @@ redis作用
         
           
           最近两个月大大小小的面试已经不下十来场了，一共面了5.6个公司，大的有蚂蚁金服，小的有初创公司，也有做直播的等等，但是面试都是大同小异，因此来记录一下自己的不足之处以及需要加强的地方。
-项目个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、
+项目个人的项目经验其实非常重要，很多面试官往往会从项目入手来考察个人的架构能力以及技术水平。例如会从你负责的模块、平时遇到的技术难点入手来考察你。很多同学可能会碰到和我一样的问题，就是工作上大多数时间负责的是业务模
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -929,7 +957,9 @@ redis作用
 某天早上在Boss上投了一份简历，中午就来了面试的电话。说是蚂蚁金服的面试官。然后就开始了蚂蚁金服公司一面：
 
 项目中那些部分是觉得有挑战性的。会对你的回答进行提问。
-因为项目的原因我回答了有
+因为项目的原因我回答了有关最短路径搜索，就问了深搜、广搜、A*方面的算法
+A*相对广搜有那些优势和你的实现方式
+怎么理解A*
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1237,7 +1267,11 @@ Equal 的原则
 把对象转换成对应的类型
 对于 类 中的 关键 域 是否一一匹配
 对 域的 判断最好 把最不可能的域先放前面
-是否对称 是否一致
+是否对称 是否一致 是否传递
+
+
+
+并发第66条:同步访问共享的数据其实解决线程安全问题最好的办法就是不共享可变的数据
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1362,6 +1396,28 @@ Equal 的原则
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lkj41110" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/qq_25673113" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-csdn"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/52ff8544e0e8" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-简书"></i>简书</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -1388,7 +1444,7 @@ Equal 的原则
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1406,12 +1462,32 @@ Equal 的原则
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 

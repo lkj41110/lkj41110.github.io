@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价简介什么是ESes全称为Elasticsearch，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编写的基于Lucene的一款软件。用户可以很容易的使用RESTful接口进行全文搜索和结构化搜索，当我">
+<meta name="description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价">
 <meta name="keywords" content="Elasticsearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="es学习————介绍">
+<meta property="og:title" content="ES学习————介绍">
 <meta property="og:url" content="http://yoursite.com/2018/10/20/es学习————介绍/index.html">
 <meta property="og:site_name" content="lkj41110的博客">
-<meta property="og:description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价简介什么是ESes全称为Elasticsearch，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编写的基于Lucene的一款软件。用户可以很容易的使用RESTful接口进行全文搜索和结构化搜索，当我">
+<meta property="og:description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T05:47:37.133Z">
+<meta property="og:updated_time" content="2019-01-03T03:02:00.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es学习————介绍">
-<meta name="twitter:description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价简介什么是ESes全称为Elasticsearch，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编写的基于Lucene的一款软件。用户可以很容易的使用RESTful接口进行全文搜索和结构化搜索，当我">
+<meta name="twitter:title" content="ES学习————介绍">
+<meta name="twitter:description" content="前言在了解Elasticsearch之前，我们应该先了解下：  什么是搜索引擎 目前有哪些主流的搜索引擎 搜索引擎搜索的质量应该如何评价">
 
 
 
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -126,7 +126,7 @@
 
 
 
-  <title>es学习————介绍 | lkj41110的博客</title>
+  <title>ES学习————介绍 | lkj41110的博客</title>
   
 
 
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">es学习————介绍</h1>
+          <h1 class="post-title" itemprop="name headline">ES学习————介绍</h1>
         
 
         <div class="post-meta">
@@ -322,7 +322,7 @@
 
           
           
-             <span id="/2018/10/20/es学习————介绍/" class="leancloud_visitors" data-flag-title="es学习————介绍">
+             <span id="/2018/10/20/es学习————介绍/" class="leancloud_visitors" data-flag-title="ES学习————介绍">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -334,6 +334,11 @@
              </span>
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>  阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -357,7 +362,8 @@
 <ol>
 <li>什么是搜索引擎</li>
 <li>目前有哪些主流的搜索引擎</li>
-<li>搜索引擎搜索的质量应该如何评价<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="什么是ES"><a href="#什么是ES" class="headerlink" title="什么是ES"></a>什么是ES</h2>es全称为<code>Elasticsearch</code>，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编写的基于<code>Lucene</code>的一款软件。用户可以很容易的使用RESTful接口进行全文搜索和结构化搜索，当我们发现原来的数据库或系统无法满足我们的搜索需求的时候，我们可以引进es作为我们的搜索引擎来满足需求。<h2 id="ES能干什么"><a href="#ES能干什么" class="headerlink" title="ES能干什么"></a>ES能干什么</h2>Elasticsearch是面向文档(document oriented)的，这意味着它可以存储整个对象或文档(document)。然而它不仅仅是存储，还会索引(index)每个文档的内容使之可以被搜索。在Elasticsearch中，你可以对文档（而非成行成列的数据）进行<code>索引、搜索、排序、过滤</code>。这种理解数据的方式与以往完全不同，这也是Elasticsearch能够执行复杂的全文搜索的原因之一。<br>可以完成的工作主要有：</li>
+<li>搜索引擎搜索的质量应该如何评价<a id="more"></a>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="什么是ES"><a href="#什么是ES" class="headerlink" title="什么是ES"></a>什么是ES</h2>es全称为<code>Elasticsearch</code>，是一个高度可扩展且开源的全文检索和分析引擎。它可以让您快速且近实时地存储，检索以及分析海量数据。他是用java编写的基于<code>Lucene</code>的一款软件。用户可以很容易的使用RESTful接口进行全文搜索和结构化搜索，当我们发现原来的数据库或系统无法满足我们的搜索需求的时候，我们可以引进es作为我们的搜索引擎来满足需求。<h2 id="ES能干什么"><a href="#ES能干什么" class="headerlink" title="ES能干什么"></a>ES能干什么</h2>Elasticsearch是面向文档(document oriented)的，这意味着它可以存储整个对象或文档(document)。然而它不仅仅是存储，还会索引(index)每个文档的内容使之可以被搜索。在Elasticsearch中，你可以对文档（而非成行成列的数据）进行<code>索引、搜索、排序、过滤</code>。这种理解数据的方式与以往完全不同，这也是Elasticsearch能够执行复杂的全文搜索的原因之一。<br>可以完成的工作主要有：</li>
 <li>分布式实时文件存储，并将每一个字段都编入索引，使其可以被搜索。</li>
 <li>实时分析的分布式搜索引擎。</li>
 <li>也可以作为一款分布式的数据库，支持保存大量结构化或者非结构化的数据<h2 id="ES相关性评分"><a href="#ES相关性评分" class="headerlink" title="ES相关性评分"></a>ES相关性评分</h2>前面我们已经了解过如何评价一个搜索质量。而在es里，我们用相关性评分来评价 每一个结果和查询的相关程度，并根据相关程度对结果进行排名。当我们简单的用match来全文搜索的时候，结果中的score就是代表相关性评分。<br>一般情况下，初始的评分系统已经很全面和完整，具体公式详见：<br><a href="https://www.elastic.co/guide/cn/elasticsearch/guide/cn/scoring-theory.html" target="_blank" rel="noopener">https://www.elastic.co/guide/cn/elasticsearch/guide/cn/scoring-theory.html</a><br>当然，我们也可以自定义评分来满足各种各样的不同情境查询条件。<h2 id="ES的优缺点和同类竞品"><a href="#ES的优缺点和同类竞品" class="headerlink" title="ES的优缺点和同类竞品"></a>ES的优缺点和同类竞品</h2>目前市面上较为常用的搜索引擎有es、<code>Solr</code>，这两款都是基于Lucene的搜索引擎。<br>在<a href="https://www.cnblogs.com/chowmin/articles/4629220.html" target="_blank" rel="noopener">搜索引擎选择： Elasticsearch与Solr</a>这篇文章里也对两者进行简单的比较和阐述。两者之间最大的区别是相对于es，solr在建立索引时，搜索效率会大大下降，且随着数据量的增加，Solr的效率会变得很低，而Elasticsearch却没有明显的变化。<br>除了上述两种方案，我们也可以直接选择使用<code>Lucene</code>。<br>Lucene 是一个 JAVA 搜索类库，es和Solr都是基于Lucene实现的，通过结合实际的需求可以定制化和更大的优化空间，更多满足各式各样的需求，但同时需要投入大量的人力物力。</li>
@@ -548,6 +554,28 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lkj41110" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/qq_25673113" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-csdn"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/52ff8544e0e8" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-简书"></i>简书</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -590,7 +618,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -608,12 +636,32 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 
