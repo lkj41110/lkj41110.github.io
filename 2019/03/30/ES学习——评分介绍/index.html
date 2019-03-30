@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Elasticsearch," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。   TF-IDF属于向量空间模型，而BM25属于概率模型，但是他们的公式可能并没有你想象的那么大差距。两种相似度模型都使用idf方法和tf方法的某种乘积来定义单个词项的">
+<meta name="description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。">
+<meta name="keywords" content="Elasticsearch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES学习——评分介绍">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/ES学习——评分介绍/index.html">
 <meta property="og:site_name" content="lkj41110的博客">
-<meta property="og:description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。   TF-IDF属于向量空间模型，而BM25属于概率模型，但是他们的公式可能并没有你想象的那么大差距。两种相似度模型都使用idf方法和tf方法的某种乘积来定义单个词项的">
+<meta property="og:description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-30T11:04:38.306Z">
+<meta property="og:image" content="http://yoursite.com/images/WX20190330-193138.png">
+<meta property="og:updated_time" content="2019-03-30T11:38:38.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES学习——评分介绍">
-<meta name="twitter:description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。   TF-IDF属于向量空间模型，而BM25属于概率模型，但是他们的公式可能并没有你想象的那么大差距。两种相似度模型都使用idf方法和tf方法的某种乘积来定义单个词项的">
+<meta name="twitter:description" content="当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。 介绍es的实时评分机制是基于 Lucene 的基础上实现的，最常见的是 TF/IDF和BM25这两种评分模型。">
+<meta name="twitter:image" content="http://yoursite.com/images/WX20190330-193138.png">
 
 
 
@@ -292,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">Elasticsearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -336,8 +361,7 @@
 
       
         <p>当我们能使用match来搜索匹配数据的时候，es会给每一个文档进行评分（匹配度），并根据评分的大小对结果文档进行排序。</p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>es的实时评分机制是基于 <code>Lucene</code> 的基础上实现的，最常见的是 <code>TF/IDF</code>和<code>BM25</code>这两种评分模型。  </p>
-<p>TF-IDF属于向量空间模型，而BM25属于概率模型，但是他们的公式可能并没有你想象的那么大差距。两种相似度模型都使用idf方法和tf方法的某种乘积来定义单个词项的权重，然后把和查询匹配的词项的权重相加作为整篇文档的分数。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>es的实时评分机制是基于 <code>Lucene</code> 的基础上实现的，最常见的是 <code>TF/IDF</code>和<code>BM25</code>这两种评分模型。<br><a id="more"></a><br>TF-IDF属于向量空间模型，而BM25属于概率模型，但是他们的公式可能并没有你想象的那么大差距。两种相似度模型都使用idf方法和tf方法的某种乘积来定义单个词项的权重，然后把和查询匹配的词项的权重相加作为整篇文档的分数。</p>
 <p>对于这两种算法的详细介绍以及区别大家可以参考：</p>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Okapi_BM25" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Okapi_BM25</a></li>
@@ -351,12 +375,13 @@
 <p>例如，我们搜索<code>hallo hi</code>,es通过对应的默认解析器拆分成<code>hallo</code>和<code>hi</code>,分别求出分数score(hallo)和score(hi)：<br>总得分Score=score(hallo)+score(hi)。</p>
 <p>和sql相似,我们可以通过在搜索条件中添加explain=true,来查看具体的得分过程。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">GET /test/test1/_search?explain=true</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"query"</span>: &#123;</span><br><span class="line">    <span class="attr">"match"</span>: &#123;</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"hallo hi"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">##以下通过筛选，过滤了一些无用的信息</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">        "_shard": "[test][0]",【1】</span><br><span class="line">        "_score": 1.202173,【2】</span><br><span class="line">        "_source": &#123;</span><br><span class="line">          "title": "hallo hallo,hi hi hi hi"【3】</span><br><span class="line">        &#125;,</span><br><span class="line">        "_explanation": &#123;</span><br><span class="line">          "value": 1.202173,</span><br><span class="line">          "description": "sum of:",【4】</span><br><span class="line">          "details": [</span><br><span class="line">            &#123;</span><br><span class="line">              "value": 0.3530123,【5】</span><br><span class="line">              "description": "weight(title:hallo in 2) [PerFieldSimilarity], result of:",</span><br><span class="line">              "details": [</span><br><span class="line">                &#123;</span><br><span class="line">                  "value": 0.3530123,【7】</span><br><span class="line">                  "description": "score(doc=2,freq=2.0 = termFreq=2.0\n), product of:",</span><br><span class="line">                  "details": [</span><br><span class="line">                    &#123;</span><br><span class="line">                      <span class="attr">"value"</span>: <span class="number">0.2876821</span>,</span><br><span class="line">                      <span class="attr">"description"</span>: <span class="string">"idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:"</span>,</span><br><span class="line">                      <span class="attr">"details"</span>: [</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">4</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"docFreq"</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">5</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"docCount"</span></span><br><span class="line">                        &#125;</span><br><span class="line">                      ]</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &#123;</span><br><span class="line">                      "value": 1.2270917,【8】</span><br><span class="line">                      "description": "tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:",</span><br><span class="line">                      "details": [</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">2</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"termFreq=2.0"</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">1.2</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"parameter k1"</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">0.75</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"parameter b"</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">4.2</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"avgFieldLength"</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                          <span class="attr">"value"</span>: <span class="number">6</span>,</span><br><span class="line">                          <span class="attr">"description"</span>: <span class="string">"fieldLength"</span></span><br><span class="line">                        &#125;</span><br><span class="line">                      ]</span><br><span class="line">                    &#125;</span><br><span class="line">                  ]</span><br><span class="line">                &#125;</span><br><span class="line">              ]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              "value": 0.84916073,【6】</span><br><span class="line">              "description": "weight(title:hi in 2) [PerFieldSimilarity], result of:"</span><br><span class="line">              ##省略和 hallo的计算方式类似</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></p>
 <p>从最外层结构往里分析：<br>【1】:代表文档的分片，<code>[test][0]</code>,在es中每一个分片评分都是单独计算的<br>【2】【3】:代表最后的分数和文档<br>【4】：总的分数是1.202173，<code>sum of</code>是默认的加权平均，把<code>hallo</code>的分数（0.3530123）+<code>hi</code>的分数（0.84916073）<br>【5】【6】:分表表示<code>hallo</code>的评分和<code>hi</code>的评分。其<code>description</code>描述的很明白:weight(title:hallo in 2)<br>【7】【8】:<code>hallo</code>的评分是由【7】（idf）<em>【8】（tfNorm）得出<br>【7】:idf(下面介绍)=<code>log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5))</code><br>【8】:tfNorm=`(freq </em> (k1 + 1)) / (freq + k1 <em> (1 - b + b </em> fieldLength / avgFieldLength))`</p>
-<h3 id="公式介绍-BM25"><a href="#公式介绍-BM25" class="headerlink" title="公式介绍(BM25)"></a>公式介绍(BM25)</h3><p>归纳一下上面的公式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">score = \Sigma(IDF*tfNorm)</span><br></pre></td></tr></table></figure></p>
+<h3 id="公式介绍-BM25"><a href="#公式介绍-BM25" class="headerlink" title="公式介绍(BM25)"></a>公式介绍(BM25)</h3><p>归纳一下上面的公式:</p>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>$$score = \Sigma(IDF*tfNorm)$$</p>
 <p>参考，<a href="https://www.cnblogs.com/sheeva/p/6847309.html" target="_blank" rel="noopener">BM25与TF/IDF的区别</a></p>
 <p>IDF (inverse document frequency)：逆文档频率，是指一个词在文档中出现的次数越多，则他的权值相对越多。例如常用的词and 或 or 或 a在文档中出现的次数非常多，相对于用户而言重要性很小，但是elasticSearch等不常见的词进行搜索的时候相对于用户来说，权重应该更大。</p>
-<h4 id="IDF"><a href="#IDF" class="headerlink" title="IDF"></a>IDF</h4><p>在_explanation中也已经写明了IDF的计算公式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IDF = \log(\frac&#123;1 + (docCount - docFreq + 0.5)&#125;&#123;docFreq + 0.5&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="IDF"><a href="#IDF" class="headerlink" title="IDF"></a>IDF</h4><p>在_explanation中也已经写明了IDF的计算公式：<br>$$<br>IDF = \log(\frac{1 + (docCount - docFreq + 0.5)}{docFreq + 0.5})<br>$$</p>
 <p>其中docCount代表该<code>分片</code>总的文档数量数量，docFreq代表有这个分词的文档数量。<br>在例子中，总共的文档数为5，包含hallo的文档数为4，所以docFreq=4，docCount=5。IDF最终算出来为0.2876821，且在同一分片中所有的文档的IDF且相同。</p>
-<h4 id="tfNorm"><a href="#tfNorm" class="headerlink" title="tfNorm"></a>tfNorm</h4><p>tfNorm代表此term在此文档中的重要程度，在此doc中出现次数越多，越重要；并且文档的长度越短，也见解说明改term在此doc中越重要。<br>具体公式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tfNorm=\frac&#123;freq * (k1 + 1)&#125; &#123;freq + k1 * (1 - b + b * \frac&#123;fieldLength&#125;&#123;avgFieldLength&#125;)&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="tfNorm"><a href="#tfNorm" class="headerlink" title="tfNorm"></a>tfNorm</h4><p>tfNorm代表此term在此文档中的重要程度，在此doc中出现次数越多，越重要；并且文档的长度越短，也见解说明改term在此doc中越重要。<br>具体公式：<br><img src="/images/WX20190330-193138.png" alt="图片"></p>
 <p>其中：<br>freq:在文档中出现的次数<br>k1：为调优参数，固定值，默认1.2，合理的值需要依赖文档的数据。<br>b：为调优参数，固定值，默认为0.75，合理的值需要依赖文档的数据。<br>fieldLength：是满足查询条件的doc的filed的长度<br>avgFieldLength：是满足查询条件的所有doc的filed的长度.</p>
 <h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><p>评分都是以分片为单位的，若两个文档分布在不同的分片，会出现即使内容完全相同但是分数有差异的情况（IDF的docCount和docFreq有区别）或者出现更加符合我们心里预期的文档分数反而较低的情况。</p>
 <p>方案：</p>
@@ -408,6 +433,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Elasticsearch/" rel="tag"># Elasticsearch</a>
+          
+        </div>
       
 
       
